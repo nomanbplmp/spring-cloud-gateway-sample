@@ -1,0 +1,27 @@
+server:
+  port: 9999
+
+logging:
+  level:
+    org.springframework: DEBUG
+
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - HEAD
+#  security:
+      #   oauth2:
+        #client:
+          #provider:
+            #oidc:
+            ##token-uri: http://localhost:8080/auth/realms/master/protocol/openid-connect/token
+            #authorization-uri: http://localhost:8080/auth/realms/master/protocol/openid-connect/auth
+            #userinfo-uri: http://localhost:8080/auth/realms/master/protocol/openid-connect/userinfo
+            #user-name-attribute: preferred_username
